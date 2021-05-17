@@ -71,3 +71,6 @@ class ItemController extends Controller
 
 Voraussetzung mit Linux! Installiere bitte den Postman!
 `GET http://localhost:8000/api/items/`
+
+![lumen-test](https://user-images.githubusercontent.com/70861205/118483446-4df50980-b716-11eb-950f-10afd271a1db.png)
+
