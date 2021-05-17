@@ -27,7 +27,7 @@ Wir beginnen nun, erste Routen hinzuzufügen. Dazu öffnen wir die Datei web.php
 
 Die erste Route soll alle Items zurückgeben, die zweite Route genau eins per Id.
 
-## Controller imolementieren
+## Controller implementieren
 
 Als nächstes implementieren wir den in der Route angegebenen ItemContoller mit den benötigten Methoden. Dazu erstellen wir eine neue Datei ItemController.php unter app/Http/Controllers.
 Im Konstruktor bauen wir ein Array für die Beispieldaten, die in den Methoden all und get verwendet werden.
