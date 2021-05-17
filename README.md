@@ -4,7 +4,7 @@
 
 Zunächst erstellen wir ein neues Lumen-Projekt mittels Composer.
 
-Folgender Befehl erstellt ein lauffähiges Projekt mit allen Abhängigkeiten im Ordner lumen-api.
+Folgender Befehl erstellt ein lauffähiges Projekt mit allen Abhängigkeiten im Ordner Lumen-Test.
 
 ```php composer.phar create-project --prefer-dist laravel/lumen Lumen-Test```
 
