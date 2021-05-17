@@ -1,7 +1,12 @@
-namespace App\Http\Controllers; use Illuminate\Http\Request;
+<?php
 
-class ItemController extends Controller { private $items;
-
+namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+ 
+class ItemController extends Controller
+{
+    private $items;
+ 
     public function __construct() {
         $this->items = array();
         for($i = 0; $i<10; $i++) {
@@ -11,14 +16,14 @@ class ItemController extends Controller { private $items;
             );
             $this->items[] = $item;
         }
-        
+         
     }
-
+ 
     public function all()
     {
         return response()->json($this->items);
     }
-    
+     
     public function get($id)
     {
         $found_key = array_search($id, array_column($this->items, 'id'));

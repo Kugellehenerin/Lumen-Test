@@ -17,4 +17,7 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix'=>'api'], function() use($router){ $router->get('/items', 'ItemController@all'); $router->get('/items/{id}', 'ItemController@get'); });
+$router->group(['prefix'=>'api'], function() use($router){
+    $router->get('/items', 'ItemController@all');
+    $router->get('/items/{id}', 'ItemController@get');
+});
