@@ -69,7 +69,8 @@ class ItemController extends Controller
 
 ## Aufruf der API
 
-Voraussetzung mit Linux! Installiere bitte den Postman!
+Getestet mit Postman! Kann natürlich auch über den Browser aufgerufen werden.
+
 `GET http://localhost:8000/api/items/`
 
 ![lumen-test](https://user-images.githubusercontent.com/70861205/118483446-4df50980-b716-11eb-950f-10afd271a1db.png)
