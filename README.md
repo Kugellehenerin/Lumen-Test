@@ -1,24 +1,23 @@
 # Lumen PHP Framework REST API
 
-## Vorbereitung
+## Preparation
 
-Zunächst erstellen wir ein neues Lumen-Projekt mittels Composer.
+First, we create a new Lumen project using [Composer](https://getcomposer.org/).
 
-Folgender Befehl erstellt ein lauffähiges Projekt mit allen Abhängigkeiten im Ordner Lumen-Test.
+The following command creates a runnable project with all dependencies in the Lumen Test folder.
 
 ```php composer.phar create-project --prefer-dist laravel/lumen Lumen-Test```
 
-Lokal kann man jetzt den Build-In Server von PHP nutzen und folgen Aufruf starten.
+Locally you can now use the build-in server of PHP and start the following call.
 
 ```php -S localhost:8000 -t public```
 
-Ruft man nun localhost:8000 im Browser auf, sieht man eine Seite mit folgender Ausgabe.
-
+If you now call localhost:8000 in the browser, you will see a page with the following output.
 ```Lumen () (Laravel Components)```
 
-## Route hinzufügen
+## Add route
 
-Wir beginnen nun, erste Routen hinzuzufügen. Dazu öffnen wir die Datei web.php im Verzeichnis routes und fügen folgendes hinzu.
+We now start to add the first routes. To do this, we open the web.php file in the routes directory and add the following.
 
 ```
 $router->group(['prefix'=>'api'], function() use($router){
@@ -27,12 +26,14 @@ $router->group(['prefix'=>'api'], function() use($router){
 });
 ```
 
-Die erste Route soll alle Items zurückgeben, die zweite Route genau eins per Id.
+The first route should return all items, the second route exactly one per id.
 
-## Controller implementieren
 
-Als nächstes implementieren wir den in der Route angegebenen ItemContoller mit den benötigten Methoden. Dazu erstellen wir eine neue Datei ItemController.php unter app/Http/Controllers.
-Im Konstruktor bauen wir ein Array für die Beispieldaten, die in den Methoden all und get verwendet werden.
+## Implement controller
+
+Next, we implement the ItemContoller specified in the route with the required methods. For this we create a new file ItemController.php under app/Http/Controllers.
+In the constructor, we build an array for the sample data that will be used in the all and get methods.
+
 ```<?php
 
 namespace App\Http\Controllers;
@@ -67,9 +68,9 @@ class ItemController extends Controller
 }
 ```
 
-## Aufruf der API
+## Calling the API
 
-Getestet mit Postman! Kann natürlich auch über den Browser aufgerufen werden.
+Tested with Postman! Can of course also be called via the browser.
 
 `GET http://localhost:8000/api/items/`
 
